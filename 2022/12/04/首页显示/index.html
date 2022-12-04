@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670166972352">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670167514332">
     
-    <link rel="stylesheet" href="/css/style.css?v=1670166972352">
+    <link rel="stylesheet" href="/css/style.css?v=1670167514332">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1670166972352">
+            <link rel="stylesheet" href="/custom.css?v=1670167514332">
         
     
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -77,27 +77,6 @@
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
-            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
-            <div class="mdui-list-item-content">
-                我的朋友
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/donate.html" title="给我赞助">
-            <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
-            <div class="mdui-list-item-content">
-                给我赞助
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
-            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-            <div class="mdui-list-item-content">
-                关于博主
-            </div>
-        </a>
-        
     </div>
     <aside id="nexmoe-sidebar">
     
@@ -121,20 +100,7 @@
 	<div class="nexmoe-widget nexmoe-social">
 		<a
 			class="mdui-ripple"
-			href="https://jq.qq.com/?_wv=1027&k=5CfKHun"
-			target="_blank"
-			mdui-tooltip="{content: 'QQ群'}"
-			style="
-				color: rgb(249, 174, 8);
-				background-color: rgba(249, 174, 8, .1);
-			"
-		>
-			<i
-				class="nexmoefont icon-QQ"
-			></i> </a
-		><a
-			class="mdui-ripple"
-			href="https://space.bilibili.com/20238211"
+			href="https://space.bilibili.com/341934049"
 			target="_blank"
 			mdui-tooltip="{content: '哔哩哔哩'}"
 			style="
@@ -147,7 +113,7 @@
 			></i> </a
 		><a
 			class="mdui-ripple"
-			href="https://github.com/nexmoe/"
+			href="https://github.com/jnudhf"
 			target="_blank"
 			mdui-tooltip="{content: 'GitHub'}"
 			style="
@@ -157,45 +123,6 @@
 		>
 			<i
 				class="nexmoefont icon-github"
-			></i> </a
-		><a
-			class="mdui-ripple"
-			href="https://www.zhihu.com/people/nexmoe"
-			target="_blank"
-			mdui-tooltip="{content: '知乎'}"
-			style="
-				color: rgb(30, 136, 229);
-				background-color: rgba(30, 136, 229, .1);
-			"
-		>
-			<i
-				class="nexmoefont icon-zhihu"
-			></i> </a
-		><a
-			class="mdui-ripple"
-			href="https://twitter.com/nexmoe"
-			target="_blank"
-			mdui-tooltip="{content: 'Twitter'}"
-			style="
-				color: rgb(59, 151, 239);
-				background-color: rgba(59, 151, 239, .1);
-			"
-		>
-			<i
-				class="nexmoefont icon-twitter"
-			></i> </a
-		><a
-			class="mdui-ripple"
-			href="https://nexmoe.com/atom.xml"
-			target="_blank"
-			mdui-tooltip="{content: 'RSS'}"
-			style="
-				color: rgb(247, 132, 34);
-				background-color: rgba(247, 132, 34, .1);
-			"
-		>
-			<i
-				class="nexmoefont icon-rss"
 			></i> </a
 		>
 	</div>
@@ -208,8 +135,48 @@
     
         
         
+        <!-- 一言 -->
+<div class="nexmoe-widget-wrap">
+  <h3 class="nexmoe-widget-title">
+    一言
+  </h3>
+  <div class="nexmoe-widget">
+    <ul class="hitokoto-box">
+      <li id="hitokoto_text_parent" class="hitokoto-text" hitokotoCategory="">
+        <a href="#" id="hitokoto_text">
+          
+        </a>
+        <a href="#" id="hitokoto_error_text" style="display: none;">
+          
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  let hitokotoText = document.getElementById('hitokoto_text')
+  let hitokotoErroText = document.getElementById('hitokoto_error_text')
+  let hitokotoCategory = document.getElementById('hitokoto_text_parent').getAttribute('hitokotoCategory')
+  window.onload = function () {
+    let url = 'https://v1.hitokoto.cn'
+    if (hitokotoCategory) {
+      url += '?c=' + hitokotoCategory
+    }
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        hitokotoText.innerText = "「 " + data.hitokoto + " 」 from " + data.from
+        hitokotoText.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      })
+      .catch((reason) => {
+        console.error(11, reason)
+        hitokotoText.style.display = 'none'
+        hitokotoErroText.style.display = 'block'
+      })
+  }
+</script>
     
-        
         
         
   <div class="nexmoe-widget-wrap">
@@ -255,46 +222,12 @@
 
     
         
-        <div class="nexmoe-widget-wrap">
-    <div class="nexmoe-widget nexmoe-link">
-		<ul>
-        
-            <li>
-                <a href="https://xiaoshu.app/" target="_blank" >
-                    <img src="https://xsm.nexmoe.com/images/Infinite/Snipaste_2022-05-18_20-46-50.png" alt="小舒同学"></img>
-                    <p>小舒同学</p>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://nexmoe.com/" target="_blank" >
-                    <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="折影轻梦"></img>
-                    <p>折影轻梦</p>
-                </a>
-            </li>
-        
-		</ul>
-    </div>
-</div>
-<style>
-.nexmoe-widget-wrap .nexmoe-link ul li a {
-    text-align : center;
-}
-.nexmoe-widget-wrap .nexmoe-link ul li a img {
-    max-width : 100%;
-}
-.nexmoe-widget-wrap .nexmoe-link ul li a p {
-    margin: 10px 0;
-}
-</style>
-
-    
 </aside>
     <div class="nexmoe-copyright">
         &copy; 2022 DingHaifeng
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
-        <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a> <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"> <img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+        
     </div>
 </div><!-- .nexmoe-drawer -->
     </div>
@@ -315,6 +248,9 @@
         <a class="nexmoefont icon-calendar-fill">2022年12月04日</a>
         
         
+    <a><i class="nexmoefont icon-areachart"></i>约13字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
+
     </div>
     
     
@@ -330,19 +266,11 @@
 <p>#2022-12-4
   </p>
 
-    <p><img data-fancybox="gallery" src="https://i.dawnlab.me/53a8c7cf3ad77a0f0a456ce2c6afe88a.png"  alt="53a8c7cf3ad77a0f0a456ce2c6afe88a.png" data-caption="53a8c7cf3ad77a0f0a456ce2c6afe88a.png" loading="lazy"></p>
+    
   </article>
 
   
       
-    <div class="nexmoe-post-copyright">
-        <strong>Author：</strong>DingHaifeng<br>
-        <strong>Link：</strong><a href="http://example.com/2022/12/04/%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;04&#x2F;%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;04&#x2F;%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA&#x2F;</a><br>
-        
-            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-        
-    </div>
-
 
   
   
@@ -353,7 +281,7 @@
 
   
       <div class="nexmoe-post-footer">
-          请在你的配置文件中设置评论框插槽
+          
       </div>
   
 </div>
@@ -398,9 +326,9 @@
 
  
 
-<script async src="/js/app.js?v=1670166972353"></script>
+<script async src="/js/app.js?v=1670167514334"></script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
 
 </body>
 
