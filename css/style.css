@@ -1160,12 +1160,13 @@ body {
 }
 #nexmoe-content .nexmoe-primary {
   box-shadow: 0 0 1rem var(--color-shadow);
-  background-color: #22805e;
+  background-color: #404c54;
   float: left;
   width: 100%;
   padding: 24px;
   position: absolute;
   min-height: 100vh;
+  opacity: 0.8;
 }
 #nexmoe-content .nexmoe-primary .nexmoe-page-nav {
   list-style: none;
