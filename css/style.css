@@ -1166,6 +1166,7 @@ body {
   padding: 24px;
   position: absolute;
   min-height: 100vh;
+  opacity: 0.01;
 }
 #nexmoe-content .nexmoe-primary .nexmoe-page-nav {
   list-style: none;
