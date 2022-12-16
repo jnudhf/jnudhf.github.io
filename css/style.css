@@ -755,7 +755,7 @@ article.nexmoe-py ul li img {
   height: 100%;
   z-index: 6000;
   font-size: 1rem;
-  background: rgba(10,10,10,0.86);
+  background: rgba(64,76,84,0.86);
   position: fixed;
   align-items: center;
   flex-direction: column;
@@ -778,8 +778,9 @@ article.nexmoe-py ul li img {
   line-height: 1.5em;
   font-weight: normal;
   border-radius: 13px;
-  background-color: #fff;
+  background-color: #404c54;
   min-height: 3rem;
+  opacity: 0.8;
 }
 #nexmoe-search-space .search-container .search-header .search-input-container {
   width: 90%;
@@ -801,7 +802,7 @@ article.nexmoe-py ul li img {
   padding: 0.6em 0.75em;
 }
 #nexmoe-search-space .search-container .search-body .search-result {
-  background-color: #fff;
+  background-color: #404c54;
   border-radius: 13px;
 }
 #nexmoe-search-space .search-container .search-body .search-result a {
@@ -1072,7 +1073,7 @@ body {
 }
 #nexmoe-header .nexmoe-widget-wrap {
   box-shadow: 0 0 1rem var(--color-shadow);
-  background-color: #fff;
+  background-color: #404c54;
   margin: 20px;
   border-radius: var(--radius);
   overflow: hidden;
