@@ -1073,7 +1073,7 @@ body {
 }
 #nexmoe-header .nexmoe-widget-wrap {
   box-shadow: 0 0 1rem var(--color-shadow);
-  background-color: #404c54;
+  background-color: #fff0f5;
   margin: 20px;
   border-radius: var(--radius);
   overflow: hidden;
