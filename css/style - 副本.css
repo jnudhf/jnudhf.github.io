@@ -1021,7 +1021,7 @@ body {
 }
 #nexmoe-header .nexmoe-search input {
   border: none !important;
-  background-color: #fff;
+  background-color: transparent;
   padding: 20px;
   box-sizing: border-box;
   outline: none;
